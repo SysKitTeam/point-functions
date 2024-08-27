@@ -2,6 +2,8 @@
 
 This repository contains Azure Functions for integrating Syskit Point with ServiceNow and Jira. The functions process webhook events from Syskit Point and automatically create tickets in ServiceNow and Jira.
 
+<img width="657" alt="Syskit Point - Provisioning Webhooks" src="https://github.com/user-attachments/assets/2c4b67f2-5118-4f5f-9e51-e6adacc8a1c7">
+
 ## Prerequisites
 
 - **Azure Subscription**: Required to deploy Azure Functions.
