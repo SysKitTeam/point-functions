@@ -5,7 +5,7 @@ This repository contains Azure Functions for integrating Syskit Point with Servi
 ## Prerequisites
 
 - **Azure Subscription**: Required to deploy Azure Functions.
-- **ServiceNow and/or Jira Accounts**: With the necessary API access.
+- **ServiceNow and Jira accounts (depending on which services you are integrating with)**: With the necessary API access.
 - **Visual Studio 2022 or later**: For local development and deployment.
 - **.NET Core SDK**: Version 3.1 or later.
 - **Azure Functions Tools**: Installed in Visual Studio.
@@ -17,21 +17,23 @@ This repository contains Azure Functions for integrating Syskit Point with Servi
 
 Clone the repository to your local machine:
 
+```
 git clone https://github.com/SysKitTeam/point-functions.git
 cd point-functions
+```
 
 ### 2. Configure Syskit Point
 Follow the Syskit Point documentation to 
 1. [configure Azure AD app](https://docs.syskit.com/point/integrations/syskit-point-api) that will be used to work with your API
 2. [Obtain the Syskit Point secret](https://docs.syskit.com/point/integrations/syskit-point-api).
-3. Once you have obtained the secret key, modify **Config.cs** with the value obtained.
+3. Once you have obtained the secret key, modify **Config.cs** and replace the placeholder value with the value obtained.
 - **`SyskitSecretKey`**: Your secret key for validating Syskit Point webhook signatures.
 
 ### 3. Configure the Connection to ServiceNow and Jira
 
 Please consult [ServiceNow](https://docs.servicenow.com/bundle/washingtondc-api-reference/page/build/applications/concept/api-rest.html) and [Jira](https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/) documentation for more details on how to obtain these keys and setup the system. Optionally you can also change the code to use alternative authentication method. For security, you can store sensitive information in environment variables instead of hardcoding them, change the code as you see fit.
 
-Replace the placeholder values with your actual credentials and settings:
+Obtain and then replace the placeholder values with your actual credentials and settings:
 
 If you intend to use ServiceNow:
 - **`ServiceNowUrl`**: The URL of your ServiceNow instance.
@@ -59,9 +61,9 @@ Publish from Visual Studio
 2. Select Publish.
 3. Follow the prompts to deploy to your Azure subscription
 
-Please note: These functions should be deployed as HTTP triggered.
+Please note: These functions should be deployed as HTTP-triggered Azure Functions.
 
-### 6. Verify Deployment
+### 6. Register your webhooks
 Obtain the URL of the deployed Azure function(s) and [register them as webhooks in Syskit Point](https://docs.syskit.com/point/integrations/webhooks#registering-a-webhook-endpoint-with-syskit-point-api).
 
 ### 7. Verify Deployment
