@@ -33,6 +33,7 @@ If you intend to use ServiceNow:
 - **`ServiceNowUrl`**: The URL of your ServiceNow instance.
 - **`ServiceNowUsername`** and **`ServiceNowPassword`**: Your ServiceNow API credentials.
 
+If you intend to use Jira:
 - **`JiraUrl`**: This is the endpoint where issues will be created. Ensure that the URL points to your Jira instance.
 - **`JiraEmail`**: The email address linked to your Jira account, which will be used in the API authentication process.
 - **`JiraApiToken`**: A secure token generated in Jira, used instead of your Jira password for API authentication. You can generate it from your Jira account settings.
