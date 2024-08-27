@@ -27,7 +27,7 @@ cd point-functions
 ### 2. Configure Syskit Point
 Follow the Syskit Point documentation to 
 1. [configure Azure AD app](https://docs.syskit.com/point/integrations/syskit-point-api) that will be used to work with your API
-2. [Obtain the Syskit Point secret](https://docs.syskit.com/point/integrations/syskit-point-api).
+2. [Obtain the Syskit Point secret](https://docs.syskit.com/point/integrations/webhooks#signature-validation).
 3. Once you have obtained the secret key, modify **Config.cs** and replace the placeholder value with the value obtained.
 - **`SyskitSecretKey`**: Your secret key for validating Syskit Point webhook signatures.
 
