@@ -50,10 +50,8 @@ If you intend to use Jira:
 You can test the functions locally before deploying:
 
 1. Open the Solution in Visual Studio.
-2. Restore NuGet Packages:
- - Right-click on the solution in Solution Explorer and select Restore NuGet Packages.
-3. Run the Functions:
- - Press F5 to run the project locally. The Azure Functions runtime will start, and local endpoints will be available for testing.
+2. Restore NuGet Packages (Right-click on the solution in Solution Explorer and select Restore NuGet Packages)
+3. Run the Functions (Press F5 to run the project locally. The Azure Functions runtime will start, and local endpoints will be available for testing)
 
 ### 5. Deploy to Azure
 Publish from Visual Studio
